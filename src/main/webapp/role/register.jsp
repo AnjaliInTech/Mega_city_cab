@@ -21,13 +21,13 @@
 </head>
 <body>
     <div class="login-container">
-        <h2>Register for Mega City Cab</h2>
+        <h2>SIGN UP</h2>
         
         <% if(request.getParameter("error") != null) { %>
             <p style="color: red;">Registration failed! Please try again.</p>
         <% } %>
 
-        <form action="RegisterServlet" method="post">
+        <form action="${pageContext.request.contextPath}/register" method="post">
             <label for="name">Full Name:</label>
             <input type="text" id="name" name="name" required>
 
