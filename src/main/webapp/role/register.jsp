@@ -54,17 +54,23 @@
 
             <!-- Rider-specific fields (hidden by default) -->
             <div id="riderFields" style="display: none;">
-                <label for="vehicleType">Vehicle Type:</label>
-                <input type="text" id="vehicleType" name="vehicleType">
+              <label for="vehicleType">Vehicle Type:</label>
+                <select id="vehicleType" name="vehicleType">
+                    <option value="" disabled selected>Select Vehicle Type</option>
+                    <option value="Car">Car</option>
+                    <option value="Van">Van</option>
+                    <option value="Bus">Bus</option>
+                </select>
 
-                <label for="vehicleNumber">Vehicle Number:</label>
-                <input type="text" id="vehicleNumber" name="vehicleNumber">
-            </div>
+           <label for="vehicleNumber">Vehicle Number:</label>
+           <input type="text" id="vehicleNumber" name="vehicleNumber">
+           </div>
 
             <button type="submit">Register</button>
         </form>
 
         <p>Already have an account? <a href="login.jsp">Login here</a></p>
     </div>
+       
 </body>
 </html>
