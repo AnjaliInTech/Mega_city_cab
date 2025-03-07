@@ -9,11 +9,11 @@
 </head>
 <body>
      <div class="login-container">
-        <h2>Login to Mega City Cab</h2>
+        <h2>SIGN IN</h2>
         <% if(request.getParameter("error") != null) { %>
             <p style="color: red;">Invalid username or password!</p>
         <% } %>
-        <form action="LoginServlet" method="post">
+        <form action="${pageContext.request.contextPath}/login" method="post">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
 
