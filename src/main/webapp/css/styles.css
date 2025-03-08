@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
     background-color: black;
-    color: yellow;
+    color: #FFC107;
     font-family: Arial, sans-serif;
 }
 
@@ -11,34 +11,34 @@ body {
     padding: 40px;
     background-color: #222; /* Dark background for the container */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+    box-shadow: 0 0 10px #FFC107;
     text-align: center;
 }
 
 h2 {
-    color: yellow;
+    color: #FFC107;
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
-    color: yellow;
+    color: #FFC107;
 }
 
 input {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
-    border: 1px solid yellow;
+    border: 1px solid #FFC107;
     border-radius: 5px;
     background-color: black;
-    color: yellow;
+    color: #FFC107;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-color: yellow;
+    background-color: #FFC107;
     color: black;
     border: none;
     border-radius: 5px;
@@ -47,11 +47,11 @@ button {
 }
 
 button:hover {
-    background-color: #ffcc00;
+    background-color: #e29400;
 }
 
 a {
-    color: yellow;
+    color: #FFC107;
     text-decoration: none;
 }
 

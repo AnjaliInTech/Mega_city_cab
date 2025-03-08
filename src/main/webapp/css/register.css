@@ -3,7 +3,7 @@
 body {
 	
     background-color: black;
-    color: yellow;
+    color: #ffc107;
     font-family: Arial, sans-serif;
 }
 
@@ -13,19 +13,19 @@ body {
     padding: 40px;
     background-color: #222;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(255, 255, 0, 0.7);
+    box-shadow: 0 0 15px #ffc107;
     text-align: center;
 }
 
 h2 {
-    color: yellow;
+    color: #ffc107;
     font-size: 30px;
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
-    color: yellow;
+    color: #ffc107;
     font-size: 16px;
     text-align: left;
 }
@@ -34,17 +34,17 @@ input, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid yellow;
+    border: 1px solid #ffc107;
     border-radius: 5px;
     background-color: black;
-    color: yellow;
+    color: #ffc107;
     font-size: 16px;
 }
 
 button {
     width: 100%;
     padding: 12px;
-    background-color: yellow;
+    background-color: #ffc107;
     color: black;
     border: none;
     border-radius: 5px;
@@ -57,7 +57,7 @@ button:hover {
 }
 
 a {
-    color: yellow;
+    color: #ffc107;
     text-decoration: none;
 }
 

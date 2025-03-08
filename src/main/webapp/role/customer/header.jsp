@@ -10,7 +10,7 @@
 </head>
 
 <body>
-
+     
     <header>
         <div class="top-bar">
             <span class="email">📧 info@megacitycab.com</span>
@@ -27,11 +27,22 @@
             <ul class="nav-links">
                 <li><a href="index.jsp" class="active">Home</a></li>
                 <li><a href="about.jsp">About Us</a></li>
-                <li><a href="cabs.jsp">Book</a></li>
-                <li><a href="register.jsp">View Booking</a></li>
+                
+                <%-- Always show Book and View Booking links --%>
+                <li><a href="<%= request.getContextPath() %>/role/customer/bookride.jsp">Book</a></li>
+                <li><a href="<%= request.getContextPath() %>/role/customer/viewbooking.jsp">View Booking</a></li>
+                
                 <li><a href="contact.jsp">Contact Us</a></li>
             </ul>
-            <a href="login.jsp" class="login-btn">Login / Sign Up</a>
+            
+            <%-- Check if the user is logged in --%>
+            <% if (session.getAttribute("user") != null) { %>
+                <%-- User is logged in, show logout button --%>
+                <a href="<%= request.getContextPath() %>/role/logout.jsp" class="login-btn">Logout</a>
+            <% } else { %>
+                <%-- User is not logged in, show login button --%>
+                <a href="<%= request.getContextPath() %>/role/register.jsp" class="login-btn">Login / Sign Up</a>
+            <% } %>
         </nav>
     </header>
 
