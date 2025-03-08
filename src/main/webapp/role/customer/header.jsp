@@ -26,7 +26,7 @@
 
             <ul class="nav-links">
                 <li><a href="index.jsp" class="active">Home</a></li>
-                <li><a href="about.jsp">About Us</a></li>
+                <li><a href="<%= request.getContextPath() %>/role/customer/about.jsp">About Us</a></li>
                 
                 <%-- Always show Book and View Booking links --%>
                 <li><a href="<%= request.getContextPath() %>/role/customer/bookride.jsp">Book</a></li>
@@ -41,7 +41,7 @@
                 <a href="<%= request.getContextPath() %>/role/logout.jsp" class="login-btn">Logout</a>
             <% } else { %>
                 <%-- User is not logged in, show login button --%>
-                <a href="<%= request.getContextPath() %>/role/register.jsp" class="login-btn">Login / Sign Up</a>
+                <a href="<%= request.getContextPath() %>/role/login.jsp" class="login-btn">Login / Sign Up</a>
             <% } %>
         </nav>
     </header>

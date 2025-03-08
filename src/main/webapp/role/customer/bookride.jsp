@@ -4,7 +4,7 @@
     // Check if the user is logged in
     if (session.getAttribute("user") == null) {
         // Redirect to login page if not logged in
-        response.sendRedirect(request.getContextPath() + "/role/register.jsp");
+        response.sendRedirect(request.getContextPath() + "/role/login.jsp");
         return;
     }
 %>
