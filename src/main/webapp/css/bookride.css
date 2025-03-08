@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #FFD700;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top:30px;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signup-form {
+    width: 60%;
+}
+
+.ride-image {
+    width: 35%;
+}
+
+.ride-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffc107;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ffc107;
+    border-radius: 5px;
+    background-color: black;
+    color: #ffc107;
+    font-size: 1em;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #ffc107;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+}
+
+.vehicle-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.vehicle-cards .card {
+    background-color: #333333;
+    border: 1px solid #ffc107;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.vehicle-cards .card:hover {
+    background-color: #ffc107;
+    color: #000000;
+    border-color: #ffc107;
+}
+
+.vehicle-cards .card input[type="radio"] {
+    display: none;
+}
+
+.vehicle-cards .card i {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffc107;
+}
+
+.vehicle-cards .card span {
+    font-size: 1em;
+    color: #ffc107;
+}
+
+.vehicle-cards .card:hover i,
+.vehicle-cards .card:hover span {
+    color: #000000;
+}
+
+.form-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-submit {
+    background-color: #ffc107;
+    color: #000000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #e29400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+    }
+
+    .signup-form {
+        width: 100%;
+    }
+
+    .ride-image {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .vehicle-cards {
+        flex-direction: column;
+    }
+
+    .vehicle-cards .card {
+        margin: 5px 0;
+    }
+}
