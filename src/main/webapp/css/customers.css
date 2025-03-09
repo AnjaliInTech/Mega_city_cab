@@ -6,19 +6,21 @@ body {
     color: #ffc107;
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
 }
 
 .container_big {
     width: 80%;
     background-color: #222;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px #ffc107;
     text-align: center;
+    margin: 0 auto;
+    margin-top:30px;
 }
 
 h1 {
