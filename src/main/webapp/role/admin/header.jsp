@@ -36,7 +36,7 @@
                 <li><a href="about.jsp">Assign Ride</a></li>
                 <li><a href="cabs.jsp">Assigned Rides</a></li>
                 <li><a href="register.jsp">Riders</a></li>
-                <li><a href="contact.jsp">Customers</a></li>
+                <li><a href="<%= request.getContextPath() %>/customers">Customers</a></li>
             </ul>
             
             <%-- Check if the user is logged in and their role --%>

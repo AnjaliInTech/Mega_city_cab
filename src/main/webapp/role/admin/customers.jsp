@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/customers.css">
 </head>
 <body>
+   <jsp:include page="header.jsp" />
     <div class="container_big">
         <h1>All Customers</h1>
 

@@ -25,7 +25,7 @@
             <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
             <ul class="nav-links">
-                <li><a href="index.jsp" class="active">Home</a></li>
+                <li><a href="<%= request.getContextPath() %>/role/customer/indexc.jsp">Home</a></li>
                 <li><a href="<%= request.getContextPath() %>/role/customer/about.jsp">About Us</a></li>
                 
                 <%-- Always show Book and View Booking links --%>
