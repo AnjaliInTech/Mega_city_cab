@@ -33,7 +33,7 @@
 
             <ul class="nav-links">
                 <li><a href="index.jsp" class="active">Home</a></li>
-                <li><a href="about.jsp">Assign Ride</a></li>
+                <li><a href="<%= request.getContextPath() %>/admin/requested-rides">Assign Ride</a></li>
                 <li><a href="cabs.jsp">Assigned Rides</a></li>
                 <li><a href="register.jsp">Riders</a></li>
                 <li><a href="<%= request.getContextPath() %>/customers">Customers</a></li>
