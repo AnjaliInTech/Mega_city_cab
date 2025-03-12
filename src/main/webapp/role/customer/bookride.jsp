@@ -14,10 +14,10 @@
 
             if (vehicleType && !isNaN(lengthOfRide)) {
                 var vehicleRates = {
-                    "car": 100,  // Car rate in LKR per km
-                    "bike": 50,  // Bike rate in LKR per km
-                    "suv": 150,  // SUV rate in LKR per km
-                    "van": 120   // Van rate in LKR per km
+                    "car": 100,  
+                    "van": 150,  
+                    "bus": 200,  
+                    
                 };
 
                 var rate = vehicleRates[vehicleType.value] || 0;
@@ -45,7 +45,7 @@
 <body>
     <%
         if (session == null || session.getAttribute("user") == null ) {
-            response.sendRedirect("../../login.jsp");
+            response.sendRedirect("../login.jsp");
             return;
         }
 
@@ -102,20 +102,16 @@
 					            <span>Car</span>
 					        </label>
 					        <label class="card">
-					            <input type="radio" name="vehicleType" value="bike">
-					            <i class="fas fa-motorcycle"></i> <!-- FontAwesome Bike Icon -->
-					            <span>Bike</span>
-					        </label>
-					        <label class="card">
-					            <input type="radio" name="vehicleType" value="suv">
-					            <i class="fas fa-car-side"></i> <!-- FontAwesome SUV Icon -->
-					            <span>SUV</span>
-					        </label>
-					        <label class="card">
 					            <input type="radio" name="vehicleType" value="van">
 					            <i class="fas fa-shuttle-van"></i> <!-- FontAwesome Van Icon -->
 					            <span>Van</span>
 					        </label>
+					        <label class="card">
+					            <input type="radio" name="vehicleType" value="bus">
+					            <i class="fa-solid fa-bus"></i> <!-- FontAwesome Bike Icon -->
+					            <span>Bus</span>
+					        </label>
+
 					    </div>
 					</div>
                 </div>

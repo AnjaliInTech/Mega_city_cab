@@ -30,7 +30,7 @@
                 
                 <%-- Always show Book and View Booking links --%>
                 <li><a href="<%= request.getContextPath() %>/role/customer/bookride.jsp">Book</a></li>
-                <li><a href="<%= request.getContextPath() %>/role/customer/viewbooking.jsp">View Booking</a></li>
+                <li><a href="<%= request.getContextPath() %>/view-bookings">View Booking</a></li>
                 
                 <li><a href="contact.jsp">Contact Us</a></li>
             </ul>

@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 
             // Redirect to the appropriate page based on the user's role
             if ("customer".equals(user.getRole())) {
-                response.sendRedirect(request.getContextPath() + "/role/customer/header.jsp");
+                response.sendRedirect(request.getContextPath() + "/role/customer/indexc.jsp");
             } else if("rider".equals(user.getRole())) {
             	response.sendRedirect(request.getContextPath() + "/role/rider/header.jsp");
             } else {
