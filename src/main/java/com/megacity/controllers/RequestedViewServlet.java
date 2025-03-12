@@ -29,5 +29,3 @@ public class RequestedViewServlet extends HttpServlet {
         req.getRequestDispatcher("/role/customer/viewbook.jsp").forward(req, resp);
     }
 }
-
-

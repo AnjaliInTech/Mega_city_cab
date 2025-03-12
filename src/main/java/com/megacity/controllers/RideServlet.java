@@ -34,7 +34,7 @@ public class RideServlet extends HttpServlet {
             rideService.bookRide(ride);
             // Add success message to session
             req.getSession().setAttribute("successMessage", "Rlde Booked successful!");
-            resp.sendRedirect(req.getContextPath() + "/user-rides");
+            resp.sendRedirect(req.getContextPath() + "/view-bookings");
         }
     }
 
