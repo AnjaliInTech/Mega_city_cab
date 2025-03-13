@@ -12,4 +12,5 @@ public class CustomerServiceImpl implements CustomerService {
     public List<User> getAllCustomers() {
         return userDAO.getAllUsers();
     }
+    
 }

@@ -12,13 +12,14 @@
     <%
         // Check if the user is logged in and has the admin role
         if (session == null || session.getAttribute("user") == null || !"admin".equals(session.getAttribute("role"))) {
-            response.sendRedirect(request.getContextPath() + "/login.jsp");
+            response.sendRedirect(request.getContextPath() + "../login.jsp");
             return;
         }
-        String username = (String) session.getAttribute("username");
+        String username = (String) session.getAttribute("user");
 
         // Retrieve the list of assigned rides from the request attributes
-        List<Ride> assignedRides = (List<Ride>) request.getAttribute("assignedRides");
+        List<Ride> assignedRides = (List<Ride>) request.getAttribute("/assignRide");
+        
     %>
     <!-- Include the header -->
     <jsp:include page="header.jsp" />

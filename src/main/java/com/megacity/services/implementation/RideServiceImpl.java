@@ -18,4 +18,9 @@ public class RideServiceImpl implements RideService {
     public List<Ride> getRequestedRides() {
         return rideDao.getRequestedRides();
     }
+    @Override
+    public void assignRider(int rideId, String riderUsername, String vehicleNumber, String phone) {
+        // Delegate the rider assignment operation to the DAO layer
+        rideDao.assignRider(rideId, riderUsername, vehicleNumber, phone);
+    }
 }
