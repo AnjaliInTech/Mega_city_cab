@@ -64,4 +64,23 @@ public class RideDao {
 
         return rides;
     }
+    // Method to assign a rider to a ride
+    public void assignRider(int rideId, String riderUsername, String vehicleNumber, String phone) {
+        String query = "UPDATE rides SET rider_username = ?, vehicle_plate_number = ?, mobile = ?, ride_status = 'ASSIGNED' WHERE id = ?";
+
+        try (Connection conn = db_connection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+
+            stmt.setString(1, riderUsername);
+            stmt.setString(2, vehicleNumber);
+            stmt.setString(3, phone);
+            stmt.setInt(4, rideId);
+
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace(); // Better to log this in real projects
+            throw new RuntimeException("Database error while assigning rider", e);
+        }
+    }
 }

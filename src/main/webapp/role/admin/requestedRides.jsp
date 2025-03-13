@@ -188,6 +188,7 @@
             document.getElementById("assignModal").style.display = "none";
         }
 
+     // Assign Rider Modal Open
         function assignRider(rideId, startLocation, endLocation, customerUsername, price, lengthOfRide, vehicleType) {
             document.getElementById("rideId").value = rideId;
             document.getElementById("startLocation").value = startLocation;
@@ -200,6 +201,7 @@
             document.getElementById("assignModal").style.display = "block";
         }
 
+        // Fetch Riders
         function fetchRidersByVehicleType(vehicleType) {
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "${pageContext.request.contextPath}/user?vehicleType=" + vehicleType, true);
@@ -207,7 +209,9 @@
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     var riders = JSON.parse(xhr.responseText);
                     var select = document.getElementById("riderUsername");
-                    select.innerHTML = ""; // Clear existing options
+                    
+                    select.innerHTML = '<option value="">-- Select Rider --</option>'; // reset list
+                    
                     riders.forEach(function (rider) {
                         var option = document.createElement("option");
                         option.value = rider.username;
@@ -216,17 +220,22 @@
                         option.setAttribute("data-phone", rider.phone);
                         select.appendChild(option);
                     });
-
-                    // Update vehicle number and phone when a rider is selected
-                    select.addEventListener("change", function () {
-                        var selectedOption = select.options[select.selectedIndex];
-                        document.getElementById("vehicleNumber").value = selectedOption.getAttribute("data-vehicle-number");
-                        document.getElementById("phone").value = selectedOption.getAttribute("data-phone");
-                    });
                 }
             };
             xhr.send();
         }
+
+        // Event listener for updating hidden fields (Only add ONCE)
+        document.getElementById("riderUsername").addEventListener("change", function () {
+            var select = document.getElementById("riderUsername");
+            var selectedOption = select.options[select.selectedIndex];
+            
+            if (selectedOption) {
+                document.getElementById("vehicleNumber").value = selectedOption.getAttribute("data-vehicle-number") || "";
+                document.getElementById("phone").value = selectedOption.getAttribute("data-phone") || "";
+            }
+        });
+
     </script>
 </body>
 </html>
