@@ -1,8 +1,8 @@
 package com.megacity.controllers;
 
-import com.megacity.service.CustomerService;
+import com.megacity.service.RiderService;
 
-import com.megacity.services.implementation.CustomerServiceImpl;
+import com.megacity.services.implementation.RiderServiceImpl;
 import com.megacity.models.User;
 
 import javax.servlet.ServletException;
@@ -17,11 +17,11 @@ import java.util.List;
 @WebServlet("/riders")
 public class RiderServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private CustomerService customerService = new CustomerServiceImpl();
+    private RiderService riderService = new RiderServiceImpl();
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        List<User> riders = customerService.getAllCustomers();
+        List<User> riders = riderService.getAllRiders();
         
         if (riders != null) {
             request.setAttribute("riders", riders);

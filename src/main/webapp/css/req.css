@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+}
+
+h1, h2 {
+    color: #ffc107; /* Yellow heading text */
+}
+
+.container_big {
+    width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1a1a1a; /* Darker gray for table */
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ffc107; /* Yellow border */
+    text-align: center;
+}
+
+th {
+    background-color: #111111; /* Almost black */
+    color: #ffc107;
+    font-weight: bold;
+}
+
+td {
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #222222;
+}
+
+tr:hover {
+    background-color: #333333;
+}
+
+/* Button styles */
+.btn-bsic {
+    background-color: #ffc107;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-bsic:hover {
+    background-color: #e0a800;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #1c1c1c; /* Dark gray */
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ffc107; /* Yellow border */
+    border-radius: 10px;
+    width: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+.close {
+    color: #ffc107;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #e0a800;
+    text-decoration: none;
+}
+
+/* Form styles inside modal */
+.modal-content label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.modal-content input[type="text"],
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.modal-content input[type="text"]::placeholder {
+    color: #aaaaaa;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ffc107;
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #e0a800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container_big {
+        width: 95%;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+}

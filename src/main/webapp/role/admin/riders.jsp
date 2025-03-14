@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>All Customers</title>
+    <title>All Riders</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/customers.css">
 </head>
 <body>
@@ -33,6 +33,8 @@
                         <td>${rider.phone}</td>
                         <td>${rider.username}</td>
                         <td>${rider.role}</td>
+                        <td>${rider.vehicleType}</td> <!-- Added Vehicle Type -->
+                        <td>${rider.vehicleNumber}</td> <!-- Added Vehicle Number -->
                         <td>
                             <form action="deleteCustomer" method="post" style="display:inline;">
                                 <input type="hidden" name="username" value="${rider.username}">

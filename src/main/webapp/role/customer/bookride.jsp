@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>Book a Ride</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/role/client/css/ride.css">
+    <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/bookride.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script>
         // Function to calculate the price based on vehicle type and length of ride
@@ -128,9 +128,10 @@
                 </div>
             </form>
             <div class="ride-image">
-            	<img alt="" src="${pageContext.request.contextPath}/role/client/images/yellow-taxi-streets-new-york-city.jpg">
+            	<img alt="" src="<%= request.getContextPath() %>/images/taxi.jpg">
             </div>
         </div>
     </div>
+    <jsp:include page="footer.jsp" />
 </body>
 </html>
