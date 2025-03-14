@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Assigned Rides</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/role/admin/css/allrides.css">
+   <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/assignedride.css">
 </head>
 <body>
     <%

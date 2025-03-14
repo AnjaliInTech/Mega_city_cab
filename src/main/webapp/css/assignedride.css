@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* allrides.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #ffc107; /* Amber text color */
+}
+
+.container_big {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #111; /* Slightly lighter black for contrast */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+h1 {
+    text-align: center;
+    color: #ffc107;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #222; /* Dark table background */
+    color: #ffc107;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.2);
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ffc107;
+}
+
+table th {
+    background-color: #333; /* Darker for headers */
+    color: #ffc107;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #2a2a2a; /* Alternate row color */
+}
+
+table tr:hover {
+    background-color: #444; /* Hover effect */
+    color: #fff; /* White text on hover */
+}
+
+td[colspan="13"] {
+    text-align: center;
+    font-style: italic;
+    color: #bbb;
+}
+
+a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
