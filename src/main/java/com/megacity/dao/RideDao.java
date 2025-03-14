@@ -1,6 +1,7 @@
 package com.megacity.dao;
 
 import com.megacity.models.Ride;
+
 import utils.db_connection;
 
 import java.sql.Connection;
