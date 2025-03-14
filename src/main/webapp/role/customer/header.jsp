@@ -32,7 +32,7 @@
                 <li><a href="<%= request.getContextPath() %>/role/customer/bookride.jsp">Book</a></li>
                 <li><a href="<%= request.getContextPath() %>/view-bookings">View Booking</a></li>
                 
-                <li><a href="contact.jsp">Contact Us</a></li>
+                <li><a href="<%= request.getContextPath() %>/role/customer/countactus.jsp">Contact Us</a></li>
             </ul>
             
             <%-- Check if the user is logged in --%>

@@ -62,6 +62,35 @@ public class UserDAO {
         }
         return users;
     }
+    
+    //get allriders
+    public List<User> getAllRider() {
+        List<User> users = new ArrayList<>();
+        String query = "SELECT * FROM users WHERE role = 'rider'";
+
+        try (Connection conn = db_connection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                User user = new User(
+                    rs.getString("name"),
+                    rs.getString("nic"),
+                    rs.getString("address"),
+                    rs.getString("phone"),
+                    rs.getString("username"),
+                    rs.getString("password"),
+                    rs.getString("role"),
+                    rs.getString("vehicle_type"),
+                    rs.getString("vehicle_number")
+                );
+                users.add(user);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return users;
+    }
   
  // Method to get all riders filtered by vehicle type
     public List<User> getRidersByVehicleType(String vehicleType) {

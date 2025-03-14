@@ -6,7 +6,7 @@
 <html>
 <head>
     <title>Assign Ride</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/role/admin/css/allrides.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/req.css">
     <style>
         /* Modal styles */
         .modal {
