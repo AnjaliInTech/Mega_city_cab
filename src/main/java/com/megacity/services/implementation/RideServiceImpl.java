@@ -4,6 +4,7 @@ import com.megacity.dao.RideDao;
 import com.megacity.models.Ride;
 import com.megacity.service.RideService;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class RideServiceImpl implements RideService {
@@ -22,5 +23,13 @@ public class RideServiceImpl implements RideService {
     public void assignRider(int rideId, String riderUsername, String vehicleNumber, String phone) {
         // Delegate the rider assignment operation to the DAO layer
         rideDao.assignRider(rideId, riderUsername, vehicleNumber, phone);
+    }
+    @Override
+    public List<Ride> getAssignedRides() {
+        try {
+            return rideDao.getAssignedRides();
+        } catch (SQLException e) {
+            throw new RuntimeException("Failed to fetch assigned rides: " + e.getMessage(), e);
+        }
     }
 }

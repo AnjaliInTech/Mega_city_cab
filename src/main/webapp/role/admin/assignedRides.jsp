@@ -10,16 +10,14 @@
 </head>
 <body>
     <%
-        // Check if the user is logged in and has the admin role
+        // Check if the user is logged in and is an admin
         if (session == null || session.getAttribute("user") == null || !"admin".equals(session.getAttribute("role"))) {
-            response.sendRedirect(request.getContextPath() + "../login.jsp");
+            response.sendRedirect("../login.jsp");
             return;
         }
-        String username = (String) session.getAttribute("user");
 
         // Retrieve the list of assigned rides from the request attributes
-        List<Ride> assignedRides = (List<Ride>) request.getAttribute("/assignRide");
-        
+        List<Ride> assignedRides = (List<Ride>) request.getAttribute("assignedRides");
     %>
     <!-- Include the header -->
     <jsp:include page="header.jsp" />
@@ -39,6 +37,8 @@
                 <th>Rider Username</th>
                 <th>Vehicle Plate No.</th>
                 <th>Mobile No.</th>
+                <th>Ride Started At</th>
+                <th>Ride Ended At</th>
             </tr>
             <%
                 if (assignedRides != null && !assignedRides.isEmpty()) {
@@ -46,23 +46,25 @@
             %>
             <tr>
                 <td><%= ride.getId() %></td>
-                <td><%= ride.getStart_location() %></td>
-                <td><%= ride.getEnd_location() %></td>
-                <td><%= ride.getCustomer_username() %></td>
+                <td><%= ride.getStart_location() != null ? ride.getStart_location() : "N/A" %></td>
+                <td><%= ride.getEnd_location() != null ? ride.getEnd_location() : "N/A" %></td>
+                <td><%= ride.getCustomer_username() != null ? ride.getCustomer_username() : "N/A" %></td>
                 <td><%= ride.getPrice() %></td>
                 <td><%= ride.getLengthOfRide() %></td>
-                <td><%= ride.getVehicleType() %></td>
-                <td><%= ride.getRideStatus() %></td>
+                <td><%= ride.getVehicleType() != null ? ride.getVehicleType() : "N/A" %></td>
+                <td><%= ride.getRideStatus() != null ? ride.getRideStatus() : "N/A" %></td>
                 <td><%= ride.getRider_username() != null ? ride.getRider_username() : "N/A" %></td>
                 <td><%= ride.getVehiclePlateNumber() != null ? ride.getVehiclePlateNumber() : "N/A" %></td>
                 <td><%= ride.getMobile() != null ? ride.getMobile() : "N/A" %></td>
+                <td><%= ride.getRideStartedAt() != null ? ride.getRideStartedAt() : "N/A" %></td>
+                <td><%= ride.getRideEndedAt() != null ? ride.getRideEndedAt() : "N/A" %></td>
             </tr>
             <%
                     }
                 } else {
             %>
             <tr>
-                <td colspan="11">No assigned rides available.</td>
+                <td colspan="13">No assigned rides available.</td>
             </tr>
             <%
                 }
